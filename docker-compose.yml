@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  xk6build:
+    build: .
+    command: bash -c "make build && ls -la && cp k6 /etc/dist/"
+    volumes:
+      - ./dist:/etc/dist
